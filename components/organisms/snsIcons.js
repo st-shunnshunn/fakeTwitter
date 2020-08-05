@@ -12,7 +12,7 @@ const style = {
   const right = {
     marginLeft: 'auto',
     marginRight: '0',
-    display:'inline-block'
+    display:'inline-block',
   }
 
 class SnsIconsComponent extends React.Component {
@@ -20,15 +20,15 @@ class SnsIconsComponent extends React.Component {
         super(props);
         this.sns= [
           {
-            name:'FaceBook',
+            name:'Twitter',
             icon:FaTwitter,
           },
           {
-            name:'Instagram',
+            name:'FaceBook',
             icon:FaFacebook,
           },
           {
-            name:'Twitter',
+            name:'Instagram',
             icon:FaInstagram,
           },
           {

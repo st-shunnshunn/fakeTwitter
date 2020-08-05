@@ -29,7 +29,7 @@ class AcordionComponent extends React.Component {
 
     render() {
         return (
-            <div ref={this.refCarousel} style={{height:"200px", }}>
+            <div ref={this.refCarousel}>
                 <Carousel style={{display: this.state.show ? 'block' :'none'}}>
                 </Carousel>
                 <div style={{textAlign:'center'}}>
