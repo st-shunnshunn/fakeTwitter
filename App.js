@@ -4,6 +4,7 @@ import AcordionComponent from './components/organisms/acodion'
 import TabComponent from './components/organisms/tab'
 import SplitePane from './components/organisms/splitePane'
 import TitleComponent from './components/molecules/title'
+import HumBurger from './components/molecules/burger'
 
 const head = {
   paddingRight:100,
@@ -25,19 +26,22 @@ const right = {
 
 function App() {
   return (
-    <div className="App">
-      <div style={head}>
-        <div style={style}>
-          <TitleComponent></TitleComponent>
+    <div id="outer-container" className="App">
+      <HumBurger pageWrapId={"page-wrap"} outerContainerId={"outer-container"}></HumBurger>
+      <div id="page-wrap">
+        <div style={head}>
+          <div style={style}>
+            <TitleComponent></TitleComponent>
+          </div>
+          <div style={{...style,...right}}>
+            <SnsIconsComponent ></SnsIconsComponent>
+          </div>
         </div>
-        <div style={{...style,...right}}>
-          <SnsIconsComponent ></SnsIconsComponent>
+        <div>
+          <AcordionComponent></AcordionComponent>
         </div>
+          <SplitePane></SplitePane>
       </div>
-      <div>
-        <AcordionComponent></AcordionComponent>
-      </div>
-        <SplitePane></SplitePane>
     </div>
   );
 }
