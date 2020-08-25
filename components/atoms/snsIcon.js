@@ -1,7 +1,7 @@
 import * as React from 'react'
 import ReactDOM from "react-dom";
-import logo from "../../assets/sns_icon.png"
 
+import "./snsIcon.css"
 
 class SnsIconAtomComponent extends React.Component {
     constructor(props) {

@@ -7,8 +7,9 @@ export default {
   entry: path.resolve(__dirname, 'index.js'),
   output: {
     path: path.join(__dirname, '/www'),
-    filename: 'bundle.js',
+    filename: 'bundle.js'
   },
+  watch: true,
   module: {
     rules: [
       { test: /\.js?$/, exclude: /node_modules/, loader: 'babel-loader' },
@@ -40,6 +41,13 @@ export default {
     hot: true,
     open: true,
     port: 8888,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000',
+        secure: false,
+        logLevel: 'debug'
+      }
+    },
   },
   devtool: 'inline-source-map',
   plugins: [

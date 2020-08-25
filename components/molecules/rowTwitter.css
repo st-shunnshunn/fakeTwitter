@@ -1,0 +1,21 @@
+.f-container{
+    display:flex;
+    border:1px solid;
+}
+
+
+.f-itemIcon{
+    flex-basis:25%;
+}
+
+.f-itemArea{
+    flex-basis:75%;
+}
+
+.f-itemName{
+    text-align:left;
+}
+
+.f-itemValue{
+    text-align:left;
+}

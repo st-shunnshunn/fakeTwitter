@@ -18,7 +18,7 @@ class SnsIconSetMoleculesComponent extends React.Component {
             <div style={this.style}>
                 <p>{this.props.sns.name}</p>
                 <SnsIconAtomComponent>
-                    <this.props.sns.icon></this.props.sns.icon>
+                    <this.props.sns.icon onClick={this.props.sns.click}></this.props.sns.icon>
                 </SnsIconAtomComponent>
             </div>
         )

@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import SplitPane, { Pane } from "react-split-pane";
+import RowTwitter from "../molecules/rowTwitter"
 import { FaTwitter,FaFacebook, FaLine, FaInstagram  } from "react-icons/fa";
 import "./splitePane.css"
 
@@ -23,10 +24,6 @@ const style = {
   };
 
 class SplitePane extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return(
             <div style={{...style,...border}} >
@@ -35,9 +32,11 @@ class SplitePane extends React.Component {
                         <div style={{background:'#e6e6fa'}}>
                             <FaTwitter></FaTwitter>
                         </div>
-                        <div style={height}></div>
+                        <div style={height}>
+                            <RowTwitter></RowTwitter>
+                        </div>
                     </div>
-                    <div style={{...center,...border}}>
+                    {/* <div style={{...center,...border}}>
                         <div style={{background:'#e6e6fa'}}>
                             <FaFacebook></FaFacebook>
                         </div>
@@ -54,7 +53,7 @@ class SplitePane extends React.Component {
                             <FaInstagram></FaInstagram>
                         </div>
                         <div style={height}></div>
-                    </div>
+                    </div> */}
                 </SplitPane>
             </div>
         )
